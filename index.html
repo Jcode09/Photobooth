@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jbl PhotoBooth</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Jbl PhotoBooth</h1>
+    <div class="controls">
+      <label for="collage-count">Select Collage Layout:</label>
+      <select id="collage-count">
+        <option value="1">1 Image</option>
+        <option value="2">2 Images</option>
+        <option value="3">3 Images</option>
+        <option value="4">4 Images</option>
+        <option value="5">5 Images</option>
+      </select>
+      <button id="start-btn">Start Photo Booth</button>
+      <button id="save-btn" disabled>Save Collage</button>
+    </div>
+    <div class="camera-view">
+      <video id="video" autoplay></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <div id="timer" class="timer">00</div>
+    </div>
+    <div class="collage-container" id="collage-container"></div>
+    <div class="final-collage" id="final-collage">
+      <h2>Final Collage</h2>
+      <canvas id="final-canvas"></canvas>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
